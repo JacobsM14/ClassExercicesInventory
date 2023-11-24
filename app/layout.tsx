@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import head from 'next/head'
+import { Fragment } from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header_component/header'
@@ -16,11 +18,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body style={{margin: "0px", padding: "0px", overflow: "hidden"}} className={inter.className}>
-      <Header/>
-        {children}
-      </body>
-    </html>
+    <Fragment>
+      <head>
+        <title>Jacob's Manual</title>
+        <meta name="description"/>
+        <link rel="icon" href="/images/icons/jacobIcon.png" />
+      </head>
+      <html lang="en">
+        <body style={{margin: "0px", padding: "0px", overflow: "hidden"}} className={inter.className}>
+        <Header/>
+          {children}
+        </body>
+      </html>
+    </Fragment>
   )
 }
