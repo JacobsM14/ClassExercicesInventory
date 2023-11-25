@@ -1,0 +1,103 @@
+/*? GLOBAL */
+/*! FONTS */
+/** Roboto-Mono  */
+@font-face {
+  font-family: "Roboto-Mono";
+  src: url("/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+/** Fira_Sans  */
+@font-face {
+  font-family: "Fira-Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Light.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Fira-Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fira-Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Bold.ttf");
+  font-weight: 700;
+}
+/** Noto_Sans_Japanese */
+@font-face {
+  font-family: "Noto-Sans-Japanese";
+  src: url("/fonts/Noto_Sans_Japanese/NotoSansJP-VariableFont_wght.ttf");
+}
+/*! CLASSES */
+.divContGen {
+  background-color: var(--dark);
+  /* height: 100px; */
+}
+
+.contWidth {
+  width: 95%;
+  margin: 2% auto;
+}
+
+.flexCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page_StarPage01 {
+  padding: 5%;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background: linear-gradient(135deg, #b2a4ff 25%, transparent 25%) -10px 0/
+      20px 20px,
+    linear-gradient(225deg, #b2a4ff 25%, transparent 25%) -10px 0/ 20px 20px,
+    linear-gradient(315deg, #444cf755 25%, transparent 25%) 0px 0/ 20px 20px,
+    linear-gradient(45deg, #b2a4ff 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+}
+/*? SECCTIONS */
+/** ABOUT ME */
+.aboutMeContent .contWidth {
+  border-radius: 10px;
+  /* padding: 5%; */
+}
+
+.aboutMeContent .flexCont {
+  flex-wrap: wrap;
+}
+
+.aboutMeContent h3 {
+  font-family: "Noto-Sans-Japanese";
+  color: var(--light);
+  text-align: center;
+  font-size: 2em;
+  margin: 2%;
+  width: 100%;
+}
+
+.aboutMeContent p {
+  font-family: "Roboto-Mono";
+  color: var(--light);
+  text-align: justify;
+  font-size: 1em;
+  /* margin: 2%; */
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+/** ICONS */
+#infoLinks {
+  margin-top: 10%;
+}
+
+#iconsInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 2%; */
+}
+
+#iconsInfo svg {
+  max-height: 90px;
+  fill: white;
+  width: 20%;
+}

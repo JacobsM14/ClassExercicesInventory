@@ -83,15 +83,16 @@
   color: #645caa !important;
   font-weight: 600 !important;
 }
-
+/* QUIT THE SCROLLBAR */
 .navShow::-webkit-scrollbar {
   display: none;
 }
 
 .navShow {
+  /* QUIT THE SCROLLBAR */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  /* existing styles */
+  /* Make the animation of the navbar */
   justify-content: space-between;
   align-items: center;
   margin-top: 5%;
@@ -99,13 +100,10 @@
 }
 
 .navShow ul {
-  /* position: absolute; */
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
   padding: 0px 10px;
-  /* background-color: black; */
-  /* border-bottom: 2px solid var(--light); */
 }
 
 .navShow ul li {
@@ -151,11 +149,6 @@
   .navShow ul li {
     font-size: 1.2em;
   }
-
-  /* .navShow ul li {
-      margin-right: 0px;
-      margin-bottom: 10px;
-    } */
 }
 
 @media (min-width: 1024px) {
