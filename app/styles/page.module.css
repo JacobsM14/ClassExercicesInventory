@@ -1,10 +1,10 @@
 /*? GLOBAL */
 /*! FONTS */
 /** Roboto-Mono  */
-@font-face {
+/* @font-face {
   font-family: "Roboto-Mono";
   src: url("/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
-}
+} */
 /** Fira_Sans  */
 @font-face {
   font-family: "Fira-Sans";
@@ -37,10 +37,15 @@
   margin: 2% auto;
 }
 
-.flexCont {
+.flexCont,
+.flexContPageHome {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flexContPageHome {
+  flex-wrap: wrap;
 }
 
 #page_StarPage01 {
@@ -80,7 +85,8 @@
 
 .tabShow:hover {
   transition: 700ms;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /** ABOUT ME */
@@ -100,12 +106,20 @@
   font-size: 2em;
   margin: 2%;
   width: 100%;
+  padding: 5% 0%;
+}
+
+.aboutMeContent img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  /* padding: 1% 0%; */
 }
 
 .aboutMeContent p {
-  font-family: "Roboto-Mono";
+  font-family: "Noto-Sans-Japanese";
   color: var(--light);
-  text-align: justify;
+  text-align: center;
   font-size: 1em;
   /* margin: 2%; */
   width: 90%;
@@ -123,10 +137,40 @@
   justify-content: space-around;
   align-items: center;
   /* margin-top: 2%; */
+  padding-bottom: 5%;
 }
 
 #iconsInfo svg {
   max-height: 90px;
   fill: white;
   width: 20%;
+}
+
+@media (min-width: 946px) {
+  /** FLEX 2 CONTENTS */
+  .flexContPageHome {
+    flex-wrap: nowrap;
+  }
+
+  /** TEXTS */
+  .aboutMeContent h3 {
+    padding: 1% 0%;
+  }
+
+  /** IMAGE */
+  .aboutMeContent img {
+    width: 80%;
+    padding: 1% 0%;
+  }
+
+  /** CONTS */
+  /* INFOLINKS */
+  #infoLinks {
+    margin-top: 2%;
+  }
+  /* ABOUT ME */
+  .aboutMeContent {
+    width: 40%;
+    /* padding: 5%; */
+  }
 }

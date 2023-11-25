@@ -154,9 +154,13 @@
 @media (min-width: 1024px) {
   /*? HEADER */
   /** TEXT */
+  .textHeader {
+    padding-top: 10%;
+  }
+
   .textHeader img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 
   .textHeader h1 {
@@ -182,9 +186,4 @@
     font-size: 1.5em;
     padding: 0% 1%;
   }
-
-  /* .navShow ul li {
-      margin-right: 0px;
-      margin-bottom: 10px;
-    } */
 }

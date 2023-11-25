@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./styles/page.module.css";
-import { Fragment, useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { Fragment } from "react";
+// import { AnimatePresence, motion } from "framer-motion";
 
 const Home: React.FC = () => {
   const backgroundAnimation = {
@@ -18,9 +18,9 @@ const Home: React.FC = () => {
       {/* CONTENT */}
       <div id={styles.page_StarPage01}>
         <div className={styles.infoHome}>
-          <div className={styles.contWidth}>
+          <div className={styles.contWidth + " " + styles.flexContPageHome}>
             <div className={styles.recommendedToSee}>
-              <h2>Guides Recomended</h2>
+              <h2>Most used technologies</h2>
               <div className={styles.contWidth}>
                 <div className={styles.tabShow}>
                   <Image
@@ -43,12 +43,7 @@ const Home: React.FC = () => {
                     height={300}
                     alt="logoJS"
                   />
-                  <h4>JavaScript</h4>
-                  {/* <p>
-                    Is a language, really important for build your own websites,
-                    this can hel you to manage cookies, make animations... On
-                    your WebSite
-                  </p> */}
+                  <h4>React</h4>
                 </div>
                 <div className={styles.tabShow}>
                   <Image
@@ -58,6 +53,15 @@ const Home: React.FC = () => {
                     alt="logoJS"
                   />
                   <h4>TypeScript</h4>
+                </div>
+                <div className={styles.tabShow}>
+                  <Image
+                    src="/images/icons/techIcons/jsLogo.png"
+                    width={300}
+                    height={300}
+                    alt="logoJS"
+                  />
+                  <h4>JavaScript</h4>
                   {/* <p>
                     Is a language, really important for build your own websites,
                     this can hel you to manage cookies, make animations... On
@@ -82,9 +86,14 @@ const Home: React.FC = () => {
                     I'm a web developer, I like to learn new things and I'm
                     always looking for new challenges.
                   </p>
-
+                  <Image
+                    src="/images/SVG/fast-working-monochromatic.svg"
+                    width={300}
+                    height={300}
+                    alt="Ilustration"
+                  />
                   <p>
-                    I made this Website to store all the thigs I learn about my
+                    I made this website to store all the thigs I learn about my
                     profession, <strong>PROGRAMMING</strong>
                   </p>
                 </div>
