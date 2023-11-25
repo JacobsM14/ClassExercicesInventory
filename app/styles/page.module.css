@@ -44,16 +44,45 @@
 }
 
 #page_StarPage01 {
-  padding: 5%;
-  background-color: #e5e5f7;
-  opacity: 0.8;
-  background: linear-gradient(135deg, #b2a4ff 25%, transparent 25%) -10px 0/
-      20px 20px,
-    linear-gradient(225deg, #b2a4ff 25%, transparent 25%) -10px 0/ 20px 20px,
-    linear-gradient(315deg, #444cf755 25%, transparent 25%) 0px 0/ 20px 20px,
-    linear-gradient(45deg, #b2a4ff 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+  padding: 10% 0%;
+  background-color: #f9f7f7;
 }
 /*? SECCTIONS */
+/** WHAT SHOULD I DO */
+.recommendedToSee h2 {
+  text-align: center;
+}
+
+.tabShow {
+  /* width: 90%; */
+  border-radius: 10px;
+  /* border: 1px solid var(--dark); */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  margin: 10% auto;
+}
+
+.tabShow img {
+  width: 30%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tabShow h4 {
+  font-family: "Fira-Sans";
+  color: var(--dark);
+  font-size: 1.5em;
+  margin: 2% 10%;
+  width: 100%;
+}
+
+.tabShow:hover {
+  transition: 700ms;
+  transform: scale(1.1);
+}
+
 /** ABOUT ME */
 .aboutMeContent .contWidth {
   border-radius: 10px;

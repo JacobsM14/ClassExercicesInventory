@@ -29,19 +29,33 @@
 
 /*? FOOTER */
 
-.footerCont .contWidth {
-  border-radius: 10px;
+.footerCont {
+  /* margin-top: 10%; */
+  padding: 2% 0%;
+  background: rgb(249, 247, 247);
+  background: linear-gradient(
+    200deg,
+    rgba(249, 247, 247, 1) 10%,
+    rgba(178, 164, 255, 1) 100%
+  );
+  /* border-radius: 10px; */
   /* padding: 5%; */
 }
 
-.footerCont .contWidth h4 {
+.footerCont h3 {
   font-family: "Roboto-Mono";
-  color: var(--light);
+  color: var(--dark);
   text-align: center;
   margin-bottom: 2%;
 }
-/* #imageShowFooter img {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-} */
+
+.footerCont h3 span {
+  color: #645caa;
+}
+
+.footerCont p {
+  font-family: "Noto-Sans-Japanese";
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2%;
+}
