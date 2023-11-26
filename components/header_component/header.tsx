@@ -1,8 +1,118 @@
+"use client";
 import Image from "next/image";
 import styles from "./header.module.css";
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef } from "react";
 
-const header = () => {
+interface headerProps {
+  title: string;
+}
+
+const header: React.FC<headerProps> = ({ title }) => {
+  // REFS FOR NAV
+  const homeRef = useRef<HTMLAnchorElement>(null);
+  const myProjectsRef = useRef<HTMLAnchorElement>(null);
+  const personalBlogRef = useRef<HTMLAnchorElement>(null);
+  const typescriptRef = useRef<HTMLAnchorElement>(null);
+  const htmlRef = useRef<HTMLAnchorElement>(null);
+  const cssRef = useRef<HTMLAnchorElement>(null);
+  const javascriptRef = useRef<HTMLAnchorElement>(null);
+  const phpRef = useRef<HTMLAnchorElement>(null);
+  const reactRef = useRef<HTMLAnchorElement>(null);
+  const wordpressRef = useRef<HTMLAnchorElement>(null);
+  const mysqlRef = useRef<HTMLAnchorElement>(null);
+  const cppRef = useRef<HTMLAnchorElement>(null);
+  const javaRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    // Based on the title, we will change the style of the nav
+    switch (title) {
+      case "home":
+        if (homeRef.current) {
+          homeRef.current.style.fontWeight = "700";
+          homeRef.current.style.color = "#645caa";
+        }
+        break;
+      case "MyProjects":
+        if (myProjectsRef.current) {
+          myProjectsRef.current.style.fontWeight = "700";
+          myProjectsRef.current.style.color = "#645caa";
+        }
+        break;
+      case "PersonalBlog":
+        if (personalBlogRef.current) {
+          personalBlogRef.current.style.fontWeight = "700";
+          personalBlogRef.current.style.color = "#645caa";
+        }
+        break;
+      case "TypeScript":
+        if (typescriptRef.current) {
+          typescriptRef.current.style.fontWeight = "700";
+          typescriptRef.current.style.color = "#645caa";
+        }
+        break;
+      case "HTML":
+        if (htmlRef.current) {
+          htmlRef.current.style.fontWeight = "700";
+          htmlRef.current.style.color = "#645caa";
+        }
+        break;
+      case "CSS":
+        if (cssRef.current) {
+          cssRef.current.style.fontWeight = "700";
+          cssRef.current.style.color = "#645caa";
+        }
+        break;
+      case "JavaScript":
+        if (javascriptRef.current) {
+          javascriptRef.current.style.fontWeight = "700";
+          javascriptRef.current.style.color = "#645caa";
+        }
+        break;
+      case "PHP":
+        if (phpRef.current) {
+          phpRef.current.style.fontWeight = "700";
+          phpRef.current.style.color = "#645caa";
+        }
+        break;
+      case "React":
+        if (reactRef.current) {
+          reactRef.current.style.fontWeight = "700";
+          reactRef.current.style.color = "#645caa";
+        }
+        break;
+      case "Wordpress":
+        if (wordpressRef.current) {
+          wordpressRef.current.style.fontWeight = "700";
+          wordpressRef.current.style.color = "#645caa";
+        }
+        break;
+      case "MySql":
+        if (mysqlRef.current) {
+          mysqlRef.current.style.fontWeight = "700";
+          mysqlRef.current.style.color = "#645caa";
+        }
+        break;
+      case "Cpp":
+        if (cppRef.current) {
+          cppRef.current.style.fontWeight = "700";
+          cppRef.current.style.color = "#645caa";
+        }
+        break;
+      case "Java":
+        if (javaRef.current) {
+          javaRef.current.style.fontWeight = "700";
+          javaRef.current.style.color = "#645caa";
+        }
+        break;
+      default:
+        if (homeRef.current) {
+          homeRef.current.style.fontWeight = "700";
+          homeRef.current.style.color = "#645caa";
+        }
+        break;
+    }
+  }, []);
+
   return (
     <Fragment>
       <div className={styles.divContGen}>
@@ -31,48 +141,69 @@ const header = () => {
             <nav className={styles.navShow}>
               <ul>
                 <li>
-                  <a href="" className={styles.selected}>
+                  <a href="/" ref={homeRef}>
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="">MyProjects</a>
+                  <a href="/pages/MyProjects" ref={myProjectsRef}>
+                    MyProjects
+                  </a>
                 </li>
                 <li>
-                  <a href="">PersonalBlog</a>
+                  <a href="" ref={personalBlogRef}>
+                    PersonalBlog
+                  </a>
                 </li>
                 <li>
-                  <a href="">TypeScript</a>
+                  <a href="" ref={typescriptRef}>
+                    TypeScript
+                  </a>
                 </li>
                 <li>
-                  <a href="">HTML</a>
+                  <a href="" ref={htmlRef}>
+                    HTML
+                  </a>
                 </li>
                 <li>
-                  <a href="">CSS</a>
+                  <a href="" ref={cssRef}>
+                    CSS
+                  </a>
                 </li>
                 <li>
-                  <a href="">JavaScript</a>
+                  <a href="" ref={javascriptRef}>
+                    JavaScript
+                  </a>
                 </li>
                 <li>
-                  <a href="">PHP</a>
+                  <a href="" ref={phpRef}>
+                    PHP
+                  </a>
                 </li>
                 <li>
-                  <a href="">CSS</a>
+                  <a href="" ref={reactRef}>
+                    React
+                  </a>
                 </li>
                 <li>
-                  <a href="">React</a>
+                  <a href="" ref={wordpressRef}>
+                    Wordpress
+                  </a>
                 </li>
                 <li>
-                  <a href="">Wordpress</a>
+                  <a href="" ref={mysqlRef}>
+                    MySql
+                  </a>
                 </li>
                 <li>
-                  <a href="">MySql</a>
+                  <a href="" ref={cppRef}>
+                    Cpp
+                  </a>
                 </li>
                 <li>
-                  <a href="">Cpp</a>
-                </li>
-                <li>
-                  <a href="">Java</a>
+                  <a href="" ref={javaRef}>
+                    Java
+                  </a>
                 </li>
               </ul>
             </nav>

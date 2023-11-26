@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./styles/page.module.css";
 import { Fragment } from "react";
+import Header from "@/components/header_component/header";
 // import { AnimatePresence, motion } from "framer-motion";
 
 const Home: React.FC = () => {
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <Fragment>
+      <Header title={"home"} />
       {/* CONTENT */}
       <div id={styles.page_StarPage01}>
         <div className={styles.infoHome}>
@@ -100,7 +102,10 @@ const Home: React.FC = () => {
                 <div id={styles.infoLinks}>
                   <h3>Find me here!</h3>
                   <div id={styles.iconsInfo}>
-                    <a href="" id={styles.iconGithub}>
+                    <a
+                      href="https://github.com/JacobsM14"
+                      id={styles.iconGithub}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="146"
@@ -138,7 +143,10 @@ const Home: React.FC = () => {
                         </g>
                       </svg>
                     </a>
-                    <a href="" id={styles.iconTwitter}>
+                    <a
+                      href="https://twitter.com/Marshal1214"
+                      id={styles.iconTwitter}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="146"
@@ -176,7 +184,10 @@ const Home: React.FC = () => {
                         </g>
                       </svg>
                     </a>
-                    <a href="" id={styles.iconMedium}>
+                    <a
+                      href="https://medium.com/@jacobsm14"
+                      id={styles.iconMedium}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="146"
@@ -214,7 +225,10 @@ const Home: React.FC = () => {
                         </g>
                       </svg>
                     </a>
-                    <a href="" id={styles.iconLinkedin}>
+                    <a
+                      href="https://linkedin.com/in/marcel-esplugas-jacobo-942488228"
+                      id={styles.iconLinkedin}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="146"

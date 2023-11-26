@@ -204,7 +204,7 @@
 
 /* Use the colors to transition to */
 #iconMedium svg:hover stop:first-child {
-  stop-color: #ffc5c5;
+  stop-color: #ef9595;
 }
 
 #iconMedium svg:hover stop:last-child {
