@@ -9,7 +9,9 @@ import { dropdown } from "@nextui-org/react";
 
 export default function MyProjects() {
   const dropdownRef1 = useRef<HTMLDivElement>(null);
-  console.log(dropdownRef1.current?.innerHTML);
+
+  // console.log(document.getElementById("dropdown1")?.innerHTML);
+  console.log(dropdownRef1.current);
 
   return (
     <Fragment>

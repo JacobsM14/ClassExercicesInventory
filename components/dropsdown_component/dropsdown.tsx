@@ -34,7 +34,7 @@ const dropdownButton: React.FC<dropdownProps> = ({
     <Fragment>
       <Dropdown>
         <DropdownTrigger>
-          <Button variant="bordered" className={styles.buttonStyle} id={id}>
+          <Button variant="bordered" className={styles.buttonStyle}>
             {selectedValue}
             <svg
               xmlns="http://www.w3.org/2000/svg"
