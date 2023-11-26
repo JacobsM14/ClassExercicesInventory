@@ -1,0 +1,60 @@
+/**DROPDOWN */
+.dropDownSelectionSection {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 2% 0%;
+}
+
+.buttonStyle {
+  /* STYLES */
+  color: var(--primary);
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 2px 2px 5px 0px var(--primary);
+  /* font-weight: 500; */
+
+  /*DISPLAY */
+  margin: 0% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2%;
+  max-height: 30px;
+}
+
+.buttonStyle:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  transition: 800ms;
+}
+
+.buttonStyle svg {
+  width: 40px;
+  height: 20px;
+}
+
+.dropDownMenu ul {
+  list-style: none;
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 0%;
+  font-family: "Noto-Sans-Japanese";
+}
+
+.dropDownMenu ul li:visited {
+  /* background-color: var(--primary); */
+}
+
+.dropDownMenu ul li span {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  color: var(--light);
+}
+
+.dropDownMenu ul li svg {
+  width: 20px;
+}

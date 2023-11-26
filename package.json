@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.3.6",
+    "@nextui-org/react": "^2.2.9",
     "ariakit": "^2.0.0-next.44",
     "framer-motion": "^10.16.5",
     "next": "14.0.3",
