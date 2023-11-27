@@ -14,21 +14,23 @@ interface dropdownProps {
   id: string;
   startValue: string;
   dropdownItems: string[];
+  selectedValue: string;
+  selectedKeys: string;
+  setSelectedKeys: any;
+
+
 }
 
 // import { AnimatePresence, motion } from "framer-motion";
 
 const dropdownButton: React.FC<dropdownProps> = ({
   id,
-  startValue,
   dropdownItems,
+  selectedValue,
+  selectedKeys,
+  setSelectedKeys,
 }) => {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set([startValue]));
-
-  const selectedValue = React.useMemo(
-    () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
-    [selectedKeys]
-  );
+  
 
   return (
     <Fragment>

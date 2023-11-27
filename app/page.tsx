@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                     alt="Ilustration"
                   />
                   <p>
-                    I made this website to store all the thigs I learn about my
+                    I made this website to store all the things I learn about my
                     profession, <strong>PROGRAMMING</strong>
                   </p>
                 </div>
