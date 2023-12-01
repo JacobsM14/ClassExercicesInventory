@@ -1,14 +1,7 @@
 "use client";
 import styles from "./dropdown.module.css";
-import React from "react";
-import { Fragment } from "react";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-  Button,
-} from "@nextui-org/react";
+import { Fragment, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface dropdownProps {
   id: string;
@@ -17,8 +10,6 @@ interface dropdownProps {
   selectedValue: string;
   selectedKeys: string;
   setSelectedKeys: any;
-
-
 }
 
 // import { AnimatePresence, motion } from "framer-motion";
@@ -26,42 +17,67 @@ interface dropdownProps {
 const dropdownButton: React.FC<dropdownProps> = ({
   id,
   dropdownItems,
+  startValue,
   selectedValue,
   selectedKeys,
   setSelectedKeys,
 }) => {
-  
+  const [dropdownOpen, setDropdownOpen] = useState(false); // Add state for dropdown open
+
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
 
   return (
     <Fragment>
-      <Dropdown>
-        <DropdownTrigger>
-          <Button variant="bordered" className={styles.buttonStyle}>
-            {selectedValue}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="146"
-              height="146"
-              viewBox="0 0 24 24"
+      <div className={styles.contDropdownshow}>
+        <div className={styles.triggerDropdown}>
+          <button
+            className={styles.buttonStyle}
+            onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click
+          >
+            {selectedValue || startValue}
+          </button>
+        </div>
+        <AnimatePresence>
+          {dropdownOpen && ( // Conditionally render dropdown
+            <motion.div
+              className={styles.showEachOption}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.6 }}
             >
-              <path fill="#aa96da" d="m12 15l-5-5h10l-5 5Z" />
-            </svg>
-          </Button>
-        </DropdownTrigger>
-        <DropdownMenu
-          aria-label="Single selection"
-          variant="flat"
-          className={styles.dropDownMenu}
-          disallowEmptySelection
-          selectionMode="single"
-          selectedKeys={selectedKeys}
-          onSelectionChange={setSelectedKeys}
-        >
-          {dropdownItems.map((element) => {
-            return <DropdownItem key={element}>{element}</DropdownItem>;
-          })}
-        </DropdownMenu>
-      </Dropdown>
+              <div className={styles.contOptions}>
+                {dropdownItems.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={styles.eachOption}
+                      onClick={() => {
+                        setSelectedKeys(new Set([item]));
+                        setDropdownOpen(false); // Close dropdown when an item is clicked
+                      }}
+                    >
+                      <div
+                        className={
+                          selectedKeys.includes(item)
+                            ? styles.selectedOption
+                            : styles.notSelectedOption
+                        }
+                      >
+                        {item}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </Fragment>
   );
 };

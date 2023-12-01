@@ -5,43 +5,33 @@ import React, { useEffect } from "react";
 import { Fragment, useRef, useState } from "react";
 import Header from "@/components/header_component/header";
 import Dropsdown from "@/components/dropsdown_component/dropsdown";
-import { dropdown } from "@nextui-org/react";
 
 export default function MyProjects() {
   const dropdownRef1 = useRef<HTMLButtonElement>(null);
 
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(['All']));
+  const [selectedKeys, setSelectedKeys] = React.useState(new Set(["All"]));
 
   const selectedValue = React.useMemo(
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
     [selectedKeys]
   );
 
-  const [selectedKeys2, setSelectedKeys2] = React.useState(new Set(['All']));
-
-  const selectedValue2 = React.useMemo(
-    () => Array.from(selectedKeys2).join(", ").replaceAll("_", " "),
-    [selectedKeys2]
-  );
-
-  useEffect(() => {
-    if (dropdownRef1.current) {
-      dropdownRef1.current.addEventListener("click", function() {
-        console.log("-------")
-        console.log(selectedValue)
-        console.log(selectedValue2);
-      })
-    }
-  })
-
+  // useEffect(() => {
+  //   if (dropdownRef1.current) {
+  //     dropdownRef1.current.addEventListener("click", function () {
+  //       console.log("-------");
+  //       console.log(selectedValue);
+  //     });
+  //   }
+  // });
 
   return (
     <Fragment>
       <Header title={"MyProjects"} />
       <div id={styles.page_myProjects}>
         <div className={styles.pageIntroduction}>
-          <h3>Wellcome to My Projects storage!</h3>
-          <p>Here you can see how these projects work!</p>
+          <h3>Welcome to My Projects storage!</h3>
+          <p>Here you can see a lot of exercices of a lot of technologies</p>
         </div>
         <div className={styles.contWidth}>
           <div className={styles.dropDownSelectionSection}>
@@ -51,17 +41,53 @@ export default function MyProjects() {
               selectedKeys={JSON.stringify(selectedKeys)}
               setSelectedKeys={setSelectedKeys}
               selectedValue={selectedValue}
-              dropdownItems={["All", "None", "React", "HTML", "JavaScript"]}
+              dropdownItems={[
+                "All",
+                "CSS",
+                "HTML",
+                "React",
+                "TypeScript",
+                "JavaScript",
+                "C++",
+              ]}
             />
-            <Dropsdown
-              id={"dropdown2"}
-              startValue={"All"}
-              selectedKeys={JSON.stringify(selectedKeys2)}
-              setSelectedKeys={setSelectedKeys2}
-              selectedValue={selectedValue2}
-              dropdownItems={["All", "Yes", "React", "HTML", "JavaScript"]}
-            />
-            <button id={styles.buttonRefFilter} ref={dropdownRef1} className={styles.buttonStyle}>FILTER</button>
+            <button
+              id={styles.buttonRefFilter}
+              ref={dropdownRef1}
+              className={styles.buttonStyle}
+            >
+              FILTER
+            </button>
+          </div>
+          <div id={styles.showProjectsSection}>
+            <div className={styles.contProject}>
+              <div className={styles.flexCont}>
+                <h3>ProjectExample01</h3>
+                <button>Download</button>
+              </div>
+              <p>A project for make the template to show projects xdxd.</p>
+            </div>
+            <div className={styles.contProject}>
+              <div className={styles.flexCont}>
+                <h3>ProjectExample01</h3>
+                <button>Download</button>
+              </div>
+              <p>A project for make the template to show projects xdxd.</p>
+            </div>
+            <div className={styles.contProject}>
+              <div className={styles.flexCont}>
+                <h3>ProjectExample01</h3>
+                <button>Download</button>
+              </div>
+              <p>A project for make the template to show projects xdxd.</p>
+            </div>
+            <div className={styles.contProject}>
+              <div className={styles.flexCont}>
+                <h3>ProjectExample01</h3>
+                <button>Download</button>
+              </div>
+              <p>A project for make the template to show projects xdxd.</p>
+            </div>
           </div>
         </div>
       </div>

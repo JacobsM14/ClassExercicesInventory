@@ -58,10 +58,11 @@
 
 /**DROPDOWN */
 .dropDownSelectionSection {
+  width: 50%;
   display: flex;
-  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
-  margin: 2% 0%;
+  margin: 5% 0% 10%;
 }
 
 .buttonStyle {
@@ -101,10 +102,6 @@
   font-family: "Noto-Sans-Japanese";
 }
 
-.dropDownMenu ul li:visited {
-  /* background-color: var(--primary); */
-}
-
 .dropDownMenu ul li span {
   display: inline-block;
   padding: 10px;
@@ -115,4 +112,64 @@
 
 .dropDownMenu ul li svg {
   width: 20px;
+}
+
+/*? showProjects */
+
+#showProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0%;
+}
+
+.contProject {
+  /* STYLES */
+  background-color: var(--light);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px var(--primary);
+  margin: 5% 2%;
+  font-family: "Fira-Sans";
+  font-weight: 400;
+  font-size: 1.2em;
+  color: var(--dark);
+}
+
+.contProject .flexCont {
+  justify-content: start !important;
+  flex-wrap: wrap;
+}
+
+.contProject h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0%;
+  padding: 2%;
+}
+
+.contProject p {
+  margin: 0%;
+  padding: 2%;
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.contProject button {
+  color: var(--light);
+  background-color: var(--primary);
+  font-weight: 600;
+  font-size: 0.8em;
+  border-radius: 3px;
+  border: 0px solid var(--light);
+  box-shadow: 1px 1px 3px 0px var(--dark);
+  /*DISPLAY */
+  margin: 2% 2%;
+}
+
+.contProject button:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+  transition: 400ms;
 }

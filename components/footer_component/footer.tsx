@@ -10,7 +10,7 @@ const footer = () => {
         <h3>
           Powered by <span>Marcel</span>
         </h3>
-        <p>WebSite build in TypeScript</p>
+        <p>Website build in TypeScript</p>
       </div>
       {/* </div> */}
     </Fragment>

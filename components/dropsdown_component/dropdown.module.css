@@ -1,4 +1,10 @@
 /**DROPDOWN */
+.contDropdownshow {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
 .dropDownSelectionSection {
   display: flex;
   /* justify-content: center; */
@@ -10,17 +16,18 @@
   /* STYLES */
   color: var(--primary);
   border-radius: 5px;
+  font-size: 1em;
+  padding: 5%;
   border: 0px;
   box-shadow: 2px 2px 5px 0px var(--primary);
-  /* font-weight: 500; */
-
+  width: 100px;
   /*DISPLAY */
-  margin: 0% 2%;
+  /* margin: 0% 1em; */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2% 2%;
-  max-height: 30px;
+  max-height: 25px;
 }
 
 .buttonStyle:hover {
@@ -35,26 +42,34 @@
   height: 20px;
 }
 
-.dropDownMenu ul {
-  list-style: none;
+.contOptions {
+  /* display: none; */
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: absolute;
   background-color: var(--primary);
-  border-radius: 10px;
-  padding: 0%;
-  font-family: "Noto-Sans-Japanese";
+  color: white;
+  padding: 2%;
+  transform: translateX(4%);
+
+  /* top: 100%; */
 }
 
-.dropDownMenu ul li:visited {
-  /* background-color: var(--primary); */
+.eachOption {
+  margin: 5% 0px;
+  font-size: 1em;
 }
 
-.dropDownMenu ul li span {
-  display: inline-block;
-  padding: 10px;
-  position: relative;
+.eachOption:hover {
   cursor: pointer;
   color: var(--light);
 }
 
-.dropDownMenu ul li svg {
-  width: 20px;
+/*!MEDIA QUERY */
+@media (min-width: 768px) {
+  .contOptions {
+    padding: 0.5%;
+  }
 }
