@@ -22,7 +22,9 @@ const Home: React.FC = () => {
         <div className={styles.infoHome}>
           <div className={styles.contWidth + " " + styles.flexContPageHome}>
             <div className={styles.recommendedToSee}>
-              <h2>My most used technologies</h2>
+              <h2 id={styles.titleTechnologiesHomePage}>
+                My most used technologies
+              </h2>
               <div className={styles.contWidth}>
                 <div className={styles.tabShow}>
                   <Image
@@ -32,11 +34,6 @@ const Home: React.FC = () => {
                     alt="logoJS"
                   />
                   <h4>JavaScript</h4>
-                  {/* <p>
-                    Is a language, really important for build your own websites,
-                    this can hel you to manage cookies, make animations... On
-                    your WebSite
-                  </p> */}
                 </div>
                 <div className={styles.tabShow}>
                   <Image
@@ -64,11 +61,6 @@ const Home: React.FC = () => {
                     alt="logoJS"
                   />
                   <h4>C++</h4>
-                  {/* <p>
-                    Is a language, really important for build your own websites,
-                    this can hel you to manage cookies, make animations... On
-                    your WebSite
-                  </p> */}
                 </div>
               </div>
             </div>

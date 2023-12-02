@@ -20,6 +20,11 @@
   margin: 0% auto;
 }
 
+.contWidth2 {
+  width: 90%;
+  margin: 0% auto;
+}
+
 /*? SECTIONS */
 /**HEADER */
 .backgroundHeader {
@@ -29,14 +34,16 @@
     rgba(249, 247, 247, 1) 10%,
     rgba(178, 164, 255, 1) 100%
   );
-  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); */
 }
 
 .textHeader {
   /* color: var(--light); */
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Noto-Sans-Japanese";
-  padding-top: 15%;
+  padding-top: 2%;
   color: var(--dark);
 }
 
@@ -46,8 +53,9 @@
 
 .textHeader img {
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  margin-right: 2%;
+  width: 70px;
+  height: 70px;
 }
 
 .textHeader svg {
@@ -63,6 +71,7 @@
 
 .textHeader h3 {
   font-weight: 300;
+  font-size: 1em;
   margin-top: 2px;
 }
 
@@ -96,7 +105,7 @@
   /* Make the animation of the navbar */
   justify-content: space-between;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 0%;
   overflow: auto;
 }
 
@@ -144,9 +153,6 @@
 @media (min-width: 1024px) {
   /*? HEADER */
   /** TEXT */
-  .textHeader {
-    padding-top: 5%;
-  }
 
   .textHeader img {
     width: 150px;

@@ -16,15 +16,6 @@ export default function MyProjects() {
     [selectedKeys]
   );
 
-  // useEffect(() => {
-  //   if (dropdownRef1.current) {
-  //     dropdownRef1.current.addEventListener("click", function () {
-  //       console.log("-------");
-  //       console.log(selectedValue);
-  //     });
-  //   }
-  // });
-
   return (
     <Fragment>
       <Header title={"MyProjects"} />

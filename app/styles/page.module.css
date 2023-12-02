@@ -26,6 +26,7 @@
   font-family: "Noto-Sans-Japanese";
   src: url("/fonts/Noto_Sans_Japanese/NotoSansJP-VariableFont_wght.ttf");
 }
+
 /*! CLASSES */
 .divContGen {
   background-color: var(--dark);
@@ -56,6 +57,10 @@
 /** WHAT SHOULD I DO */
 .recommendedToSee h2 {
   text-align: center;
+}
+
+#titleTechnologiesHomePage {
+  display: none;
 }
 
 .tabShow {
@@ -143,6 +148,7 @@
 #iconsInfo a {
   padding: 0% 2%;
 }
+
 #iconsInfo svg {
   max-height: 90px;
   fill: white;
@@ -202,7 +208,6 @@
   transition: 0.4s ease;
 }
 
-/* Use the colors to transition to */
 #iconMedium svg:hover stop:first-child {
   stop-color: #ef9595;
 }
